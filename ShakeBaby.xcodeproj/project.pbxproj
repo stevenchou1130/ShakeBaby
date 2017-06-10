@@ -12,6 +12,16 @@
 		B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A84FB1EEB8A2200AD2BD0 /* LaunchScreen.storyboard */; };
 		B01A85051EEB8DA200AD2BD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85041EEB8DA200AD2BD0 /* HomeViewController.swift */; };
 		B01A85071EEB8DBB00AD2BD0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */; };
+		B01A85111EEB928A00AD2BD0 /* PersonalResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85101EEB928A00AD2BD0 /* PersonalResult.storyboard */; };
+		B01A85131EEB92AE00AD2BD0 /* Shaking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85121EEB92AE00AD2BD0 /* Shaking.storyboard */; };
+		B01A85151EEB92FD00AD2BD0 /* GroupResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85141EEB92FD00AD2BD0 /* GroupResult.storyboard */; };
+		B01A85191EEB939800AD2BD0 /* Connection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85181EEB939800AD2BD0 /* Connection.storyboard */; };
+		B01A851B1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A851A1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard */; };
+		B01A851D1EEB93E800AD2BD0 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A851C1EEB93E800AD2BD0 /* ConnectionViewController.swift */; };
+		B01A851F1EEB93FB00AD2BD0 /* ReadyToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A851E1EEB93FB00AD2BD0 /* ReadyToPlayViewController.swift */; };
+		B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */; };
+		B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */; };
+		B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		B01A84FE1EEB8A2200AD2BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01A85041EEB8DA200AD2BD0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B01A85101EEB928A00AD2BD0 /* PersonalResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalResult.storyboard; sourceTree = "<group>"; };
+		B01A85121EEB92AE00AD2BD0 /* Shaking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shaking.storyboard; sourceTree = "<group>"; };
+		B01A85141EEB92FD00AD2BD0 /* GroupResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupResult.storyboard; sourceTree = "<group>"; };
+		B01A85181EEB939800AD2BD0 /* Connection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Connection.storyboard; sourceTree = "<group>"; };
+		B01A851A1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReadyToPlay.storyboard; sourceTree = "<group>"; };
+		B01A851C1EEB93E800AD2BD0 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		B01A851E1EEB93FB00AD2BD0 /* ReadyToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyToPlayViewController.swift; sourceTree = "<group>"; };
+		B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
+		B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalResultViewController.swift; sourceTree = "<group>"; };
+		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +75,55 @@
 			isa = PBXGroup;
 			children = (
 				B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */,
-				B01A85041EEB8DA200AD2BD0 /* HomeViewController.swift */,
-				B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */,
+				B01A85161EEB935100AD2BD0 /* Home */,
+				B01A850A1EEB8FF000AD2BD0 /* Connection */,
+				B01A850B1EEB902F00AD2BD0 /* Shaking */,
+				B01A85171EEB936500AD2BD0 /* Result */,
 				B01A84F91EEB8A2200AD2BD0 /* Assets.xcassets */,
 				B01A84FB1EEB8A2200AD2BD0 /* LaunchScreen.storyboard */,
 				B01A84FE1EEB8A2200AD2BD0 /* Info.plist */,
 			);
 			path = ShakeBaby;
+			sourceTree = "<group>";
+		};
+		B01A850A1EEB8FF000AD2BD0 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				B01A851C1EEB93E800AD2BD0 /* ConnectionViewController.swift */,
+				B01A85181EEB939800AD2BD0 /* Connection.storyboard */,
+				B01A851E1EEB93FB00AD2BD0 /* ReadyToPlayViewController.swift */,
+				B01A851A1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard */,
+			);
+			name = Connection;
+			sourceTree = "<group>";
+		};
+		B01A850B1EEB902F00AD2BD0 /* Shaking */ = {
+			isa = PBXGroup;
+			children = (
+				B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */,
+				B01A85121EEB92AE00AD2BD0 /* Shaking.storyboard */,
+			);
+			name = Shaking;
+			sourceTree = "<group>";
+		};
+		B01A85161EEB935100AD2BD0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */,
+				B01A85041EEB8DA200AD2BD0 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		B01A85171EEB936500AD2BD0 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */,
+				B01A85101EEB928A00AD2BD0 /* PersonalResult.storyboard */,
+				B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */,
+				B01A85141EEB92FD00AD2BD0 /* GroupResult.storyboard */,
+			);
+			name = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01A85071EEB8DBB00AD2BD0 /* Home.storyboard in Resources */,
+				B01A85151EEB92FD00AD2BD0 /* GroupResult.storyboard in Resources */,
 				B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */,
+				B01A851B1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard in Resources */,
 				B01A84FA1EEB8A2200AD2BD0 /* Assets.xcassets in Resources */,
+				B01A85131EEB92AE00AD2BD0 /* Shaking.storyboard in Resources */,
+				B01A85191EEB939800AD2BD0 /* Connection.storyboard in Resources */,
+				B01A85111EEB928A00AD2BD0 /* PersonalResult.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01A84F31EEB8A2200AD2BD0 /* AppDelegate.swift in Sources */,
+				B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */,
+				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */,
 				B01A85051EEB8DA200AD2BD0 /* HomeViewController.swift in Sources */,
+				B01A851D1EEB93E800AD2BD0 /* ConnectionViewController.swift in Sources */,
+				B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */,
+				B01A851F1EEB93FB00AD2BD0 /* ReadyToPlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
