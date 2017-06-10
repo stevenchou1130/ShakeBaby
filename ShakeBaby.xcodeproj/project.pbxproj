@@ -26,6 +26,7 @@
 		B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */; };
 		B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */; };
 		B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A852C1EEBB85100AD2BD0 /* Constant.swift */; };
+		B01A85331EEBD39D00AD2BD0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85321EEBD39D00AD2BD0 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalResultViewController.swift; sourceTree = "<group>"; };
 		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
 		B01A852C1EEBB85100AD2BD0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B01A85321EEBD39D00AD2BD0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			children = (
 				B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */,
 				B01A852C1EEBB85100AD2BD0 /* Constant.swift */,
+				B01A85311EEBD38B00AD2BD0 /* Base */,
 				B01A85161EEB935100AD2BD0 /* Home */,
 				B01A850A1EEB8FF000AD2BD0 /* Connection */,
 				B01A850B1EEB902F00AD2BD0 /* Shaking */,
@@ -157,6 +160,14 @@
 				9B2B1D0A1EEBC83C00F7323A /* groupResultTableViewCell.xib */,
 			);
 			name = Result;
+			sourceTree = "<group>";
+		};
+		B01A85311EEBD38B00AD2BD0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B01A85321EEBD39D00AD2BD0 /* BaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +303,8 @@
 				9B2B1D0B1EEBC83C00F7323A /* groupResultTableViewCell.swift in Sources */,
 				B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */,
 				B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */,
-				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */,
+				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */
+				B01A85331EEBD39D00AD2BD0 /* BaseViewController.swift in Sources */,
 				B01A85051EEB8DA200AD2BD0 /* HomeViewController.swift in Sources */,
 				B01A851D1EEB93E800AD2BD0 /* ConnectionViewController.swift in Sources */,
 				B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */,

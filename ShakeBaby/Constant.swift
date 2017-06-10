@@ -10,9 +10,19 @@ import Foundation
 
 struct Constant {
 
-    struct SampleConstant {
+    struct Storyboard {
 
-        static let PROPOTY = "PROPOTY"
+        static let HOME         = "Home"
+        static let SHAKING      = "Shaking"
+        static let CONNECTION   = "Connection"
+
+    }
+
+    struct Controller {
+
+        static let HOME         = "HomeViewController"
+        static let SHAKING      = "ShakingViewController"
+        static let CONNECTION   = "ConnectionViewController"
         
     }
     
