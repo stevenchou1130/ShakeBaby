@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     // MARK: - Properties
     @IBOutlet weak var titleImageView: UIImageView!
@@ -26,10 +26,17 @@ class HomeViewController: UIViewController {
     @IBAction func startSingleGame(_ sender: Any) {
         print("startSingleGame")
 
+        goToPage(storyboardName: Constant.Storyboard.SHAKING,
+                 controllerName: Constant.Controller.SHAKING)
+
     }
 
     @IBAction func startMultipleGame(_ sender: Any) {
         print("startMultipleGame")
+        
+        goToPage(storyboardName: Constant.Storyboard.CONNECTION,
+                 controllerName: Constant.Controller.CONNECTION)
+
     }
 
     @IBAction func introduceGame(_ sender: Any) {
