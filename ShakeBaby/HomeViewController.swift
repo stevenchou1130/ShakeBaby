@@ -23,14 +23,15 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func startSingleGame(_ sender: Any) {
+        print("startSingleGame")
 
     }
 
     @IBAction func startMultipleGame(_ sender: Any) {
-
+        print("startMultipleGame")
     }
 
     @IBAction func introduceGame(_ sender: Any) {
-
+        print("introduceGame")
     }
 }
