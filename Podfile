@@ -6,5 +6,6 @@ target 'ShakeBaby' do
   use_frameworks!
 
   # Pods for ShakeBaby
+  pod 'Hex'
 
 end
