@@ -31,11 +31,17 @@ class ConnectionViewController: UIViewController {
     func postID() {
 
         guard let url = URL(string: "https://wuduhren.com/fap/register.php?id=\(deviceID)") else { return }
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-
         request.httpBody = deviceID.data(using: .utf8)
 
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+        }
+
+        task.resume()
+        print("=== postID ===")
     }
 
     func sendRequestToSever() {
@@ -46,7 +52,7 @@ class ConnectionViewController: UIViewController {
 
     func readyConfirm() {
 
-        let urlString = URL(string:"https://wuduhren.com/fap/testTrue.php")
+        let urlString = URL(string:"https://wuduhren.com/fap/start.php")
         guard let url = urlString else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -61,9 +67,14 @@ class ConnectionViewController: UIViewController {
 
             if  intData == 1 {
                 self.delegate?.runTimer()
+
+                DispatchQueue.main.async {
+                    self.view.backgroundColor = .red
+                }
             }
 
         }
+
         task.resume()
 
     }
