@@ -10,10 +10,27 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - Properties
+    @IBOutlet weak var titleImageView: UIImageView!
+    @IBOutlet weak var singleGameButton: UIButton!
+    @IBOutlet weak var multipleGameButton: UIButton!
+    @IBOutlet weak var introduceGameButton: UIButton!
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+
+    @IBAction func startSingleGame(_ sender: Any) {
 
     }
 
+    @IBAction func startMultipleGame(_ sender: Any) {
+
+    }
+
+    @IBAction func introduceGame(_ sender: Any) {
+
+    }
 }
