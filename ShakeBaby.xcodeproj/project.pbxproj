@@ -23,8 +23,6 @@
 		B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */; };
 		B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */; };
 		B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */; };
-		B01A85271EEB970600AD2BD0 /* FinishGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */; };
-		B01A85291EEB971F00AD2BD0 /* FinishGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */; };
 		B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A852C1EEBB85100AD2BD0 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +46,6 @@
 		B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
 		B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalResultViewController.swift; sourceTree = "<group>"; };
 		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
-		B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishGameViewController.swift; sourceTree = "<group>"; };
-		B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinishGame.storyboard; sourceTree = "<group>"; };
 		B01A852C1EEBB85100AD2BD0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,8 +145,6 @@
 		B01A85171EEB936500AD2BD0 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */,
-				B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */,
 				B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */,
 				B01A85101EEB928A00AD2BD0 /* PersonalResult.storyboard */,
 				B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */,
@@ -224,7 +218,6 @@
 				B01A85071EEB8DBB00AD2BD0 /* Home.storyboard in Resources */,
 				B01A85151EEB92FD00AD2BD0 /* GroupResult.storyboard in Resources */,
 				B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */,
-				B01A85291EEB971F00AD2BD0 /* FinishGame.storyboard in Resources */,
 				B01A851B1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard in Resources */,
 				B01A84FA1EEB8A2200AD2BD0 /* Assets.xcassets in Resources */,
 				B01A85131EEB92AE00AD2BD0 /* Shaking.storyboard in Resources */,
@@ -292,7 +285,6 @@
 				B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */,
 				B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */,
 				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */,
-				B01A85271EEB970600AD2BD0 /* FinishGameViewController.swift in Sources */,
 				B01A85051EEB8DA200AD2BD0 /* HomeViewController.swift in Sources */,
 				B01A851D1EEB93E800AD2BD0 /* ConnectionViewController.swift in Sources */,
 				B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */,
