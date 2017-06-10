@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63B3E74725855C40582EC9E1 /* Pods_ShakeBaby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE8460366F6D4ED4AD655C1 /* Pods_ShakeBaby.framework */; };
 		B01A84F31EEB8A2200AD2BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */; };
 		B01A84FA1EEB8A2200AD2BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01A84F91EEB8A2200AD2BD0 /* Assets.xcassets */; };
 		B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A84FB1EEB8A2200AD2BD0 /* LaunchScreen.storyboard */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A13115AC97DB00E5251F2A5 /* Pods-ShakeBaby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.debug.xcconfig"; sourceTree = "<group>"; };
+		8EE8460366F6D4ED4AD655C1 /* Pods_ShakeBaby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeBaby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01A84EF1EEB8A2200AD2BD0 /* ShakeBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01A84F91EEB8A2200AD2BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
 		B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalResultViewController.swift; sourceTree = "<group>"; };
 		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
+		DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B3E74725855C40582EC9E1 /* Pods_ShakeBaby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		157982F145BBB7AED7E86279 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A13115AC97DB00E5251F2A5 /* Pods-ShakeBaby.debug.xcconfig */,
+				DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		70D9E1D3DE064641C55B4AD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EE8460366F6D4ED4AD655C1 /* Pods_ShakeBaby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B01A84E61EEB8A2200AD2BD0 = {
 			isa = PBXGroup;
 			children = (
 				B01A84F11EEB8A2200AD2BD0 /* ShakeBaby */,
 				B01A84F01EEB8A2200AD2BD0 /* Products */,
+				157982F145BBB7AED7E86279 /* Pods */,
+				70D9E1D3DE064641C55B4AD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01A85011EEB8A2200AD2BD0 /* Build configuration list for PBXNativeTarget "ShakeBaby" */;
 			buildPhases = (
+				3C66A520C0A8FB45EFEF47DD /* [CP] Check Pods Manifest.lock */,
 				B01A84EB1EEB8A2200AD2BD0 /* Sources */,
 				B01A84EC1EEB8A2200AD2BD0 /* Frameworks */,
 				B01A84ED1EEB8A2200AD2BD0 /* Resources */,
+				F69196BBBF74FA679228A22C /* [CP] Embed Pods Frameworks */,
+				69D7893483E910F11A089439 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +224,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C66A520C0A8FB45EFEF47DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69D7893483E910F11A089439 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F69196BBBF74FA679228A22C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B01A84EB1EEB8A2200AD2BD0 /* Sources */ = {
@@ -322,6 +397,7 @@
 		};
 		B01A85021EEB8A2200AD2BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A13115AC97DB00E5251F2A5 /* Pods-ShakeBaby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShakeBaby/Info.plist;
@@ -335,6 +411,7 @@
 		};
 		B01A85031EEB8A2200AD2BD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShakeBaby/Info.plist;

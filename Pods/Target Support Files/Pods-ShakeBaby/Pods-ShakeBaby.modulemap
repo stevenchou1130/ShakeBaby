@@ -1,0 +1,6 @@
+framework module Pods_ShakeBaby {
+  umbrella header "Pods-ShakeBaby-umbrella.h"
+
+  export *
+  module * { export * }
+}
