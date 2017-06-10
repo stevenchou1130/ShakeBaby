@@ -301,6 +301,7 @@
 				B01A85031EEB8A2200AD2BD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
