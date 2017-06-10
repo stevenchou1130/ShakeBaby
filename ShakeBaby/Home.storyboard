@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N2g-n2-fVE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="N2g-n2-fVE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-6Q-bth">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-6Q-bth">
                                 <rect key="frame" x="46" y="40" width="283" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6OU-O0-ZLk"/>
@@ -29,27 +29,36 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVV-pN-e6W">
                                 <rect key="frame" x="46" y="547" width="62" height="30"/>
-                                <state key="normal" title="單人遊戲"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="單人遊戲">
+                                    <color key="titleColor" red="0.0078124678689999996" green="0.027413029219999999" blue="0.047019697729999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startSingleGame:" destination="N2g-n2-fVE" eventType="touchUpInside" id="bgs-1O-Vlf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjm-Op-Svt">
                                 <rect key="frame" x="267" y="547" width="62" height="30"/>
-                                <state key="normal" title="多人連線"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="多人連線">
+                                    <color key="titleColor" red="0.0078124678689999996" green="0.027413029219999999" blue="0.047019697729999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startMultipleGame:" destination="N2g-n2-fVE" eventType="touchUpInside" id="vhd-XQ-Jr2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jml-Vl-AL4">
                                 <rect key="frame" x="96" y="617" width="183" height="30"/>
-                                <state key="normal" title="如何開始"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="如何開始">
+                                    <color key="titleColor" red="0.0078124678689999996" green="0.027413029219999999" blue="0.047019697729999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="introduceGame:" destination="N2g-n2-fVE" eventType="touchUpInside" id="1Ln-WA-sOU"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0078124678689999996" green="0.027413029219999999" blue="0.047019697729999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="8Hb-6Q-bth" secondAttribute="trailing" constant="30" id="1Q3-qL-7hv"/>
                             <constraint firstItem="8Hb-6Q-bth" firstAttribute="leading" secondItem="b6n-8b-bia" secondAttribute="leadingMargin" constant="30" id="4jE-NG-sz0"/>
@@ -75,4 +84,7 @@
             <point key="canvasLocation" x="-18" y="-221"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="485" height="185"/>
+    </resources>
 </document>
