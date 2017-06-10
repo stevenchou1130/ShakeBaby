@@ -1,5 +1,5 @@
 //
-//  groupResultTableViewCell.swift
+//  GroupResultTableViewCell.swift
 //  ShakeBaby
 //
 //  Created by 孟軒蕭 on 10/06/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class groupResultTableViewCell: UITableViewCell {
+class GroupResultTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
