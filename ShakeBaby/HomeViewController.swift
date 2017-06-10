@@ -20,7 +20,15 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let backgroundImage = UIImageView(frame: self.view.bounds)
+        backgroundImage.image = UIImage(named: "HomeBack")
+        self.view.insertSubview(backgroundImage, at: 0)
+
     }
 
     @IBAction func startSingleGame(_ sender: Any) {
