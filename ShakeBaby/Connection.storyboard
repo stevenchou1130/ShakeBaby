@@ -27,18 +27,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="auq-Kz-Wwh">
-                                <rect key="frame" x="36" y="123" width="303" height="494"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVB-a0-kAa">
+                                <rect key="frame" x="20" y="123" width="335" height="514.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="431"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yaT-DR-dCI" firstAttribute="top" secondItem="auq-Kz-Wwh" secondAttribute="bottom" constant="50" id="E5u-HJ-DNv"/>
-                            <constraint firstItem="auq-Kz-Wwh" firstAttribute="top" secondItem="78I-rY-zi3" secondAttribute="bottom" constant="20" id="OSl-iz-9lN"/>
-                            <constraint firstItem="auq-Kz-Wwh" firstAttribute="leading" secondItem="CRt-un-EkT" secondAttribute="leadingMargin" constant="20" id="S6t-Jh-fnK"/>
+                            <constraint firstAttribute="trailing" secondItem="jVB-a0-kAa" secondAttribute="trailing" constant="20" id="OCq-WK-5VH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="78I-rY-zi3" secondAttribute="trailing" constant="20" id="ZXf-6g-PY9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="auq-Kz-Wwh" secondAttribute="trailing" constant="20" id="mHW-1v-Cbc"/>
+                            <constraint firstItem="jVB-a0-kAa" firstAttribute="leading" secondItem="CRt-un-EkT" secondAttribute="leading" constant="20" id="c0d-KE-6Zu"/>
                             <constraint firstItem="78I-rY-zi3" firstAttribute="top" secondItem="hC0-Qj-vOB" secondAttribute="bottom" constant="20" id="nBy-3S-8uY"/>
+                            <constraint firstItem="jVB-a0-kAa" firstAttribute="top" secondItem="78I-rY-zi3" secondAttribute="bottom" constant="20" id="pQj-z2-qUO"/>
                             <constraint firstItem="78I-rY-zi3" firstAttribute="leading" secondItem="CRt-un-EkT" secondAttribute="leadingMargin" constant="20" id="sDW-jv-sm7"/>
                         </constraints>
                     </view>
