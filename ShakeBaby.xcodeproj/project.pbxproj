@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		63B3E74725855C40582EC9E1 /* Pods_ShakeBaby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE8460366F6D4ED4AD655C1 /* Pods_ShakeBaby.framework */; };
+		9B2B1D0B1EEBC83C00F7323A /* groupResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B1D091EEBC83C00F7323A /* groupResultTableViewCell.swift */; };
+		9B2B1D0C1EEBC83C00F7323A /* groupResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B2B1D0A1EEBC83C00F7323A /* groupResultTableViewCell.xib */; };
 		B01A84F31EEB8A2200AD2BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */; };
 		B01A84FA1EEB8A2200AD2BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01A84F91EEB8A2200AD2BD0 /* Assets.xcassets */; };
 		B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A84FB1EEB8A2200AD2BD0 /* LaunchScreen.storyboard */; };
@@ -23,8 +25,6 @@
 		B01A85211EEB940900AD2BD0 /* ShakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */; };
 		B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */; };
 		B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */; };
-		B01A85271EEB970600AD2BD0 /* FinishGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */; };
-		B01A85291EEB971F00AD2BD0 /* FinishGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */; };
 		B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A852C1EEBB85100AD2BD0 /* Constant.swift */; };
 		B01A85331EEBD39D00AD2BD0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85321EEBD39D00AD2BD0 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +32,8 @@
 /* Begin PBXFileReference section */
 		4A13115AC97DB00E5251F2A5 /* Pods-ShakeBaby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.debug.xcconfig"; sourceTree = "<group>"; };
 		8EE8460366F6D4ED4AD655C1 /* Pods_ShakeBaby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShakeBaby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B2B1D091EEBC83C00F7323A /* groupResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupResultTableViewCell.swift; sourceTree = "<group>"; };
+		9B2B1D0A1EEBC83C00F7323A /* groupResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = groupResultTableViewCell.xib; sourceTree = "<group>"; };
 		B01A84EF1EEB8A2200AD2BD0 /* ShakeBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01A84F91EEB8A2200AD2BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		B01A85201EEB940900AD2BD0 /* ShakingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakingViewController.swift; sourceTree = "<group>"; };
 		B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalResultViewController.swift; sourceTree = "<group>"; };
 		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
-		B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishGameViewController.swift; sourceTree = "<group>"; };
-		B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinishGame.storyboard; sourceTree = "<group>"; };
 		B01A852C1EEBB85100AD2BD0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B01A85321EEBD39D00AD2BD0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,12 +152,12 @@
 		B01A85171EEB936500AD2BD0 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				B01A85261EEB970600AD2BD0 /* FinishGameViewController.swift */,
-				B01A85281EEB971F00AD2BD0 /* FinishGame.storyboard */,
 				B01A85221EEB941D00AD2BD0 /* PersonalResultViewController.swift */,
 				B01A85101EEB928A00AD2BD0 /* PersonalResult.storyboard */,
 				B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */,
 				B01A85141EEB92FD00AD2BD0 /* GroupResult.storyboard */,
+				9B2B1D091EEBC83C00F7323A /* groupResultTableViewCell.swift */,
+				9B2B1D0A1EEBC83C00F7323A /* groupResultTableViewCell.xib */,
 			);
 			name = Result;
 			sourceTree = "<group>";
@@ -234,8 +234,8 @@
 			files = (
 				B01A85071EEB8DBB00AD2BD0 /* Home.storyboard in Resources */,
 				B01A85151EEB92FD00AD2BD0 /* GroupResult.storyboard in Resources */,
+				9B2B1D0C1EEBC83C00F7323A /* groupResultTableViewCell.xib in Resources */,
 				B01A84FD1EEB8A2200AD2BD0 /* LaunchScreen.storyboard in Resources */,
-				B01A85291EEB971F00AD2BD0 /* FinishGame.storyboard in Resources */,
 				B01A851B1EEB93AC00AD2BD0 /* ReadyToPlay.storyboard in Resources */,
 				B01A84FA1EEB8A2200AD2BD0 /* Assets.xcassets in Resources */,
 				B01A85131EEB92AE00AD2BD0 /* Shaking.storyboard in Resources */,
@@ -300,10 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B01A84F31EEB8A2200AD2BD0 /* AppDelegate.swift in Sources */,
+				9B2B1D0B1EEBC83C00F7323A /* groupResultTableViewCell.swift in Sources */,
 				B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */,
 				B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */,
-				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */,
-				B01A85271EEB970600AD2BD0 /* FinishGameViewController.swift in Sources */,
+				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */
 				B01A85331EEBD39D00AD2BD0 /* BaseViewController.swift in Sources */,
 				B01A85051EEB8DA200AD2BD0 /* HomeViewController.swift in Sources */,
 				B01A851D1EEB93E800AD2BD0 /* ConnectionViewController.swift in Sources */,
