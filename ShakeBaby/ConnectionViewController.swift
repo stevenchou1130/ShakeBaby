@@ -14,7 +14,7 @@ protocol runTimerDelegate: class {
 
 class ConnectionViewController: BaseViewController {
     let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
-    weak var delegate: runTimerDelegate?
+    //weak var delegate: runTimerDelegate?
     var timer: Timer?
     //在這個controller做loading畫面
     //NVActivityIndicatorView
@@ -74,7 +74,7 @@ class ConnectionViewController: BaseViewController {
                 print(self.timer ?? "no timer")
                 self.goToPage(storyboardName: Constant.Storyboard.SHAKING,
                               controllerName: Constant.Controller.SHAKING)
-                self.delegate?.runTimer()
+                //self.delegate?.runTimer()
 
 //                DispatchQueue.main.async {
 //                    self.view.backgroundColor = .red
@@ -90,7 +90,11 @@ class ConnectionViewController: BaseViewController {
     func startTimer() {
         
         if timer == nil {
-             timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(readyConfirm), userInfo: nil, repeats: true)
+             timer = Timer.scheduledTimer(timeInterval: 0.5,
+                                          target: self, selector:
+                                          #selector(readyConfirm),
+                                          userInfo: nil,
+                                          repeats: true)
         }
     }
     

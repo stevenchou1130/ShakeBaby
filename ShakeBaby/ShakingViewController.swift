@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 import AudioToolbox
 
-class ShakingViewController: BaseViewController, runTimerDelegate {
+class ShakingViewController: BaseViewController {
     @IBOutlet weak var timerLabel: UILabel!
 
     @IBOutlet weak var shakeCountLabel: UILabel!
@@ -23,8 +23,8 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let connetVC = ConnectionViewController()
-        connetVC.delegate = self
+//        let connetVC = ConnectionViewController()
+//        connetVC.delegate = self
         timerLabel.text = String(totalTime)
         runTimer()
     }
@@ -54,7 +54,7 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
 
 
     func runTimer() {
-
+        print("runtimer")
         timer = Timer.scheduledTimer(timeInterval: 1,
                                      target: self,
                                      selector: (#selector(updateTimer)),
@@ -96,6 +96,5 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
         
         //goToPage(storyboardName: , controllerName: ) to resultVC
     }
-    
     
 }
