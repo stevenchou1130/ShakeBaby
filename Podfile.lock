@@ -1,12 +1,18 @@
 PODS:
   - Hex (5.0.1)
+  - SCLAlertView (0.7.0)
+  - UIView+Shake (1.3.0)
 
 DEPENDENCIES:
   - Hex
+  - SCLAlertView
+  - UIView+Shake
 
 SPEC CHECKSUMS:
   Hex: 2c757d81a2b4b6afc842458ce485c8c097ea1c79
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  UIView+Shake: 3ccbf966d40a76ea2cdbdd48d8219d322d5df5f5
 
-PODFILE CHECKSUM: 94f0c463b2c83e1fc0812df1d937153a2eef7be2
+PODFILE CHECKSUM: eb1b70d73533b28dcc3d631ab6c997f8c39ecea0
 
 COCOAPODS: 1.2.0

@@ -8,22 +8,18 @@
 
 import Foundation
 
-struct Constant {
+struct Storyboard {
 
-    struct Storyboard {
+    static let home         = "Home"
+    static let shaking      = "Shaking"
+    static let connection   = "Connection"
 
-        static let HOME         = "Home"
-        static let SHAKING      = "Shaking"
-        static let CONNECTION   = "Connection"
+}
 
-    }
+struct Controller {
 
-    struct Controller {
+    static let home         = "HomeViewController"
+    static let shaking      = "ShakingViewController"
+    static let connection   = "ConnectionViewController"
 
-        static let HOME         = "HomeViewController"
-        static let SHAKING      = "ShakingViewController"
-        static let CONNECTION   = "ConnectionViewController"
-        
-    }
-    
 }

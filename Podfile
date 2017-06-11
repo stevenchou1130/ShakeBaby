@@ -7,5 +7,8 @@ target 'ShakeBaby' do
 
   # Pods for ShakeBaby
   pod 'Hex'
+  pod 'UIView+Shake'
+  pod 'SCLAlertView'
+
 
 end

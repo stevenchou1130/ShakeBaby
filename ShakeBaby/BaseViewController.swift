@@ -10,8 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    var previousStoryboardName = Constant.Storyboard.HOME
-    var previousControllerName = Constant.Controller.HOME
+    var previousStoryboardName = Storyboard.home
+    var previousControllerName = Controller.home
 
     override func viewDidLoad() {
         super.viewDidLoad()

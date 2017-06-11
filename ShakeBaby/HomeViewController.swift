@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class HomeViewController: BaseViewController {
 
@@ -34,20 +35,26 @@ class HomeViewController: BaseViewController {
     @IBAction func startSingleGame(_ sender: Any) {
         print("startSingleGame")
 
-        goToPage(storyboardName: Constant.Storyboard.SHAKING,
-                 controllerName: Constant.Controller.SHAKING)
+        goToPage(storyboardName: Storyboard.shaking,
+                 controllerName: Controller.shaking)
 
     }
 
     @IBAction func startMultipleGame(_ sender: Any) {
         print("startMultipleGame")
         
-        goToPage(storyboardName: Constant.Storyboard.CONNECTION,
-                 controllerName: Constant.Controller.CONNECTION)
+        goToPage(storyboardName: Storyboard.connection,
+                 controllerName: Controller.connection)
 
     }
 
     @IBAction func introduceGame(_ sender: Any) {
         print("introduceGame")
+
+        let gameInfo = "1. Select single or multiple mode.\n\n2. Waiting for other players.\n(If you choose single mode, please ignore this step)\n\n3. Shake!!"
+
+        SCLAlertView().showTitle("How to play",
+                                 subTitle: gameInfo,
+                                 style: .info)
     }
 }
