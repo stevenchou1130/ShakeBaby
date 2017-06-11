@@ -25,6 +25,7 @@
 		B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */; };
 		B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A852C1EEBB85100AD2BD0 /* Constant.swift */; };
 		B01A85361EEBE82700AD2BD0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01A85351EEBE82700AD2BD0 /* BaseViewController.swift */; };
+		B024F3C11EECF4760083BDB5 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024F3C01EECF4760083BDB5 /* LoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		B01A85241EEB942E00AD2BD0 /* GroupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupResultViewController.swift; sourceTree = "<group>"; };
 		B01A852C1EEBB85100AD2BD0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B01A85351EEBE82700AD2BD0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B024F3C01EECF4760083BDB5 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		DF6FC547F5D2D73A52C43B02 /* Pods-ShakeBaby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShakeBaby.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShakeBaby/Pods-ShakeBaby.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			children = (
 				B01A84F21EEB8A2200AD2BD0 /* AppDelegate.swift */,
 				B01A852C1EEBB85100AD2BD0 /* Constant.swift */,
+				B024F3C01EECF4760083BDB5 /* LoadingIndicator.swift */,
 				B01A85341EEBE81800AD2BD0 /* Base */,
 				B01A85161EEB935100AD2BD0 /* Home */,
 				B01A850A1EEB8FF000AD2BD0 /* Connection */,
@@ -295,6 +298,7 @@
 			files = (
 				B01A84F31EEB8A2200AD2BD0 /* AppDelegate.swift in Sources */,
 				B01A85231EEB941D00AD2BD0 /* PersonalResultViewController.swift in Sources */,
+				B024F3C11EECF4760083BDB5 /* LoadingIndicator.swift in Sources */,
 				9B2B1D0F1EEBEC1900F7323A /* GroupResultTableViewCell.swift in Sources */,
 				B01A852D1EEBB85100AD2BD0 /* Constant.swift in Sources */,
 				B01A85251EEB942E00AD2BD0 /* GroupResultViewController.swift in Sources */,

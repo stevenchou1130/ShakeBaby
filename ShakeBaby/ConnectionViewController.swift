@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 protocol runTimerDelegate: class {
     func runTimer()
@@ -14,24 +15,37 @@ protocol runTimerDelegate: class {
 
 class ConnectionViewController: BaseViewController {
 
-    let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
+    @IBOutlet weak var readyTimeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
 
     var timer: Timer?
+
+    var readyTimer: Timer?
+    var totalTime = 3
+
+    let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
+
+    let loadingIndicator = LoadingIndicator()
 
     //在這個controller做loading畫面
     //NVActivityIndicatorView
     //loading結束後跑倒數畫面
-    //imageView change <number picture>
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        titleLabel.text = "Waiting for other players"
+        readyTimeLabel.isHidden = true
+
+        loadingIndicator.start()
+
         postID()
         startTimer()
     }
     
     deinit {
         timer?.invalidate()
+        readyTimer?.invalidate()
     }
 
     func postID() {
@@ -43,11 +57,12 @@ class ConnectionViewController: BaseViewController {
         request.httpBody = deviceID.data(using: .utf8)
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(data)
+
+            guard data != nil else { return }
+            print(data!)
         }
 
         task.resume()
-        print("=== postID ===")
     }
 
     func readyConfirm() {
@@ -67,31 +82,22 @@ class ConnectionViewController: BaseViewController {
 
             let intData = Int(stringData)
 
-            print(intData)
+            print(intData!)
 
             if  intData == 1 {
 
                 self.stopTimer()
                 print(self.timer ?? "no timer")
-                
-                DispatchQueue.main.async {
-                    self.goToPage(storyboardName: Storyboard.shaking,
-                                  controllerName: Controller.shaking)
-                }
-                
-                
-//                let shakeVC = UIStoryboard(name: "Shaking", bundle: nil).instantiateViewController(withIdentifier: "ShakingViewController")
-//                self.present(shakeVC, animated: true, completion: nil)
 
-//                DispatchQueue.main.async {
-//                    self.view.backgroundColor = .red
-//                }
+                DispatchQueue.main.async {
+                    self.loadingIndicator.stop()
+                    self.startReadyTimer()
+                }
             }
 
         }
 
         task.resume()
-
     }
     
     func startTimer() {
@@ -111,7 +117,44 @@ class ConnectionViewController: BaseViewController {
             timer?.invalidate()
             timer = nil
         }
-
     }
 
+    func startReadyTimer() {
+
+        titleLabel.text = "Ready"
+        readyTimeLabel.isHidden = false
+
+        if readyTimer == nil {
+            readyTimer = Timer.scheduledTimer(timeInterval: 1,
+                                         target: self,
+                                         selector: (#selector(updateReadyTimer)),
+                                         userInfo: nil,
+                                         repeats: true)
+        }
+    }
+
+    func updateReadyTimer() {
+
+        print("=== updateReadyTimer ===")
+
+        if totalTime > 0 {
+            totalTime -= 1
+            readyTimeLabel.text = "\(totalTime)"
+        }
+
+
+        if totalTime <= 0 {
+            stopReadyTimer()
+            self.goToPage(storyboardName: Storyboard.shaking,
+                          controllerName: Controller.shaking)
+        }
+    }
+
+    func stopReadyTimer() {
+
+        if readyTimer != nil {
+            readyTimer?.invalidate()
+            readyTimer = nil
+        }
+    }
 }
