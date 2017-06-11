@@ -95,14 +95,10 @@ class ShakingViewController: BaseViewController {
         guard let score = shakeCountLabel.text else { return }
 
         let userName = UIDevice.current.name
-        
-        //let characterArray: [Character] = [" ", "?", "\", "&"]
-        //userName.stringByRemovingAll(characters: characterArray)
-        let urlString = "https://wuduhren.com/fap/list.php?score=\(score)&name=\(userName)"
-        print(deviceID)
-        
-        print(score)
-        print(userName)
+        //print(userName.replacingOccurrences(of: " ", with: "_"))
+        let formateduserName = userName.replaceCharacters(characters: " ?&/'.", toSeparator: "_")
+        let urlString = "https://wuduhren.com/fap/list.php?score=\(score)&name=\(formateduserName)"
+
         print(urlString)
         guard
             let url = URL(string: urlString)
@@ -127,8 +123,16 @@ class ShakingViewController: BaseViewController {
 }
 
 extension String {
-    func stringByRemovingAll(characters: [Character]) -> String {
-        return String(self.characters.filter({ !characters.contains($0) }))
+    
+    func replaceCharacters(characters: String, toSeparator: String) -> String {
+        let characterSet = CharacterSet(charactersIn: characters)
+        let components = self.components(separatedBy: characterSet)
+        
+        let result = components.joined(separator: "")
+        return result
     }
     
+    func wipeCharacters(characters: String) -> String {
+        return self.replaceCharacters(characters: characters, toSeparator: "")
+    }
 }
