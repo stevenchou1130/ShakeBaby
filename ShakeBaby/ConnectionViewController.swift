@@ -27,10 +27,7 @@ class ConnectionViewController: BaseViewController {
 
     let loadingIndicator = LoadingIndicator()
 
-    //在這個controller做loading畫面
-    //NVActivityIndicatorView
-    //loading結束後跑倒數畫面
-
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -134,8 +131,6 @@ class ConnectionViewController: BaseViewController {
     }
 
     func updateReadyTimer() {
-
-        print("=== updateReadyTimer ===")
 
         if totalTime > 0 {
             totalTime -= 1
