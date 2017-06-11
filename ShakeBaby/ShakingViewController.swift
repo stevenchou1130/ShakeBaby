@@ -39,7 +39,7 @@ class ShakingViewController: BaseViewController {
             
             if let myData = data {
                 
-                if myData.acceleration.y > 1 || myData.acceleration.y < -1 && self.totalTime > 0{
+                if (myData.acceleration.y > 1 || myData.acceleration.y < -1) && self.totalTime > 0{
                     
                     print("Enter")
                     self.shakeCount += 1
