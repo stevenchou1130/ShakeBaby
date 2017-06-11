@@ -98,13 +98,13 @@ class ShakingViewController: BaseViewController {
         if totalTime <= 0 {
             stopTimer()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            postResults()
 
             Game.shakedCount = self.shakeCount
 
             if Game.isSingleGame {
                 goToPage(storyboardName: Storyboard.personalResult, controllerName: Controller.personalResult)
             } else {
+                postResults()
                 goToPage(storyboardName: Storyboard.groupResult, controllerName: Controller.groupResult)
             }
         }

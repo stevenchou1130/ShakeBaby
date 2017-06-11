@@ -17,11 +17,11 @@ class GroupResultViewController: BaseViewController, UITableViewDataSource, UIWe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getResult()
-        
+
+        self.getResult()
+
         let nib = UINib(nibName: "GroupResultTableViewCell", bundle: nil)
-        
-        scorechart.register(nib, forCellReuseIdentifier: "GroupResultTableViewCell")
+        self.scorechart.register(nib, forCellReuseIdentifier: "GroupResultTableViewCell")
 
     }
     
@@ -65,7 +65,7 @@ class GroupResultViewController: BaseViewController, UITableViewDataSource, UIWe
                 self.scoreArray.append(resultDict)
             }
 
-            self.scoreArray.sort { Int($0["score"]!)! < Int($1["score"]!)! }
+            self.scoreArray.sort { Int($0["score"]!)! > Int($1["score"]!)! }
             print(self.scoreArray)
 
             DispatchQueue.main.async {
