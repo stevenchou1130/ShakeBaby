@@ -117,7 +117,7 @@ class ShakingViewController: BaseViewController {
 
         let userName = UIDevice.current.name
         //print(userName.replacingOccurrences(of: " ", with: "_"))
-        let formateduserName = userName.replaceCharacters(characters: " ?&/'.", toSeparator: "_")
+        let formateduserName = userName.replaceCharacters(characters: " ?&/'.’", toSeparator: "_")
         let urlString = "https://wuduhren.com/fap/list.php?score=\(score)&name=\(formateduserName)"
 
         print(urlString)

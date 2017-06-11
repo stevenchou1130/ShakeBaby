@@ -21,42 +21,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-NN-yH7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loser" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-NN-yH7">
                                 <rect key="frame" x="36" y="35" width="303" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="i6N-mO-SBm"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成績" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-L4-KbV">
-                                <rect key="frame" x="36" y="285" width="303" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-L4-KbV">
+                                <rect key="frame" x="36" y="285" width="303" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T4J-73-jfN">
-                                <rect key="frame" x="36" y="326" width="303" height="321"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="36" y="334" width="303" height="267"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="7H3-Ri-nqd" id="b3U-9A-nhk"/>
                                     <outlet property="delegate" destination="7H3-Ri-nqd" id="1UG-Qm-D3v"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmJ-7r-9sv">
+                                <rect key="frame" x="327" y="615" width="32" height="32"/>
+                                <state key="normal" image="Replay"/>
+                                <connections>
+                                    <action selector="replay:" destination="7H3-Ri-nqd" eventType="touchUpInside" id="5G0-bb-9SU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="uGg-L4-KbV" secondAttribute="trailing" constant="20" id="7JW-nr-TIg"/>
-                            <constraint firstItem="gt0-83-jnh" firstAttribute="top" secondItem="T4J-73-jfN" secondAttribute="bottom" constant="20" id="9D3-oW-EKT"/>
+                            <constraint firstItem="gt0-83-jnh" firstAttribute="top" secondItem="T4J-73-jfN" secondAttribute="bottom" constant="66" id="9D3-oW-EKT"/>
                             <constraint firstItem="5W8-NN-yH7" firstAttribute="top" secondItem="Slp-IL-UXJ" secondAttribute="bottom" constant="15" id="9Mj-U3-UJI"/>
                             <constraint firstItem="5W8-NN-yH7" firstAttribute="leading" secondItem="zLW-ck-2dH" secondAttribute="leadingMargin" constant="20" id="EQz-dc-kVV"/>
                             <constraint firstItem="T4J-73-jfN" firstAttribute="top" secondItem="uGg-L4-KbV" secondAttribute="bottom" constant="20" id="PpU-ev-Btp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T4J-73-jfN" secondAttribute="trailing" constant="20" id="S2X-Vm-KJW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5W8-NN-yH7" secondAttribute="trailing" constant="20" id="Y9C-Rh-3DA"/>
+                            <constraint firstAttribute="trailing" secondItem="LmJ-7r-9sv" secondAttribute="trailing" constant="16" id="YT9-m2-FTQ"/>
                             <constraint firstItem="uGg-L4-KbV" firstAttribute="top" secondItem="5W8-NN-yH7" secondAttribute="bottom" constant="50" id="Z01-va-YwU"/>
                             <constraint firstItem="T4J-73-jfN" firstAttribute="leading" secondItem="zLW-ck-2dH" secondAttribute="leadingMargin" constant="20" id="bsS-EN-56b"/>
                             <constraint firstItem="uGg-L4-KbV" firstAttribute="leading" secondItem="zLW-ck-2dH" secondAttribute="leadingMargin" constant="20" id="cPj-nY-XfY"/>
+                            <constraint firstItem="gt0-83-jnh" firstAttribute="top" secondItem="LmJ-7r-9sv" secondAttribute="bottom" constant="20" id="cRv-uq-3MP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resultImage" destination="5W8-NN-yH7" id="QrT-Zr-So0"/>
                         <outlet property="scorechart" destination="T4J-73-jfN" id="ksH-Nt-3Zi"/>
                     </connections>
                 </viewController>
@@ -65,4 +75,8 @@
             <point key="canvasLocation" x="-250" y="112"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Loser" width="321" height="249"/>
+        <image name="Replay" width="32" height="32"/>
+    </resources>
 </document>

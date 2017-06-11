@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-6Q-bth">
-                                <rect key="frame" x="46" y="40" width="283" height="100"/>
+                                <rect key="frame" x="46" y="108" width="283" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6OU-O0-ZLk"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                             <constraint firstItem="cVV-pN-e6W" firstAttribute="centerY" secondItem="fjm-Op-Svt" secondAttribute="centerY" id="WMT-U0-4Bi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jml-Vl-AL4" secondAttribute="trailing" constant="80" id="iBu-hz-ZdH"/>
                             <constraint firstItem="jml-Vl-AL4" firstAttribute="leading" secondItem="b6n-8b-bia" secondAttribute="leadingMargin" constant="80" id="kcw-YL-LoV"/>
-                            <constraint firstItem="8Hb-6Q-bth" firstAttribute="top" secondItem="Ra0-Sn-9gV" secondAttribute="bottom" constant="20" id="o5g-6L-ijN"/>
+                            <constraint firstItem="8Hb-6Q-bth" firstAttribute="top" secondItem="Ra0-Sn-9gV" secondAttribute="bottom" constant="88" id="o5g-6L-ijN"/>
                             <constraint firstItem="p3h-4w-R2P" firstAttribute="top" secondItem="jml-Vl-AL4" secondAttribute="bottom" constant="66" id="wSm-VI-UgG"/>
                         </constraints>
                     </view>

@@ -27,7 +27,7 @@ class HomeViewController: BaseViewController {
         super.viewWillAppear(animated)
 
         let backgroundImage = UIImageView(frame: self.view.bounds)
-        backgroundImage.image = UIImage(named: "HomeBack")
+        backgroundImage.image = UIImage(named: "bottle")
         self.view.insertSubview(backgroundImage, at: 0)
 
     }

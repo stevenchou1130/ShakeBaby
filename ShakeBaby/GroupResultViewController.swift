@@ -8,9 +8,10 @@
 
 import UIKit
 
-class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebViewDelegate {
+class GroupResultViewController: BaseViewController, UITableViewDataSource, UIWebViewDelegate {
     
     @IBOutlet weak var scorechart: UITableView!
+    @IBOutlet weak var resultImage: UIImageView!
     
     var scoreArray: [[String: String]] = [[:]]
     
@@ -18,27 +19,22 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
         super.viewDidLoad()
         getResult()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-            self.deleteRecord()
-        })
-        
         let nib = UINib(nibName: "GroupResultTableViewCell", bundle: nil)
         
         scorechart.register(nib, forCellReuseIdentifier: "GroupResultTableViewCell")
-        
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
     
     func getResult() {
+
         let urlString = URL(string:"https://wuduhren.com/fap/list.php?result=1")
+
         guard let url = urlString else { return }
+
         var request = URLRequest(url: url)
+
         request.httpMethod = "GET"
+
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             guard let data = data else { return }
@@ -59,6 +55,7 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
             self.scoreArray = []
             
             for scoreObject in arrayOfString {
+
                 let key = scoreObject[0]
                 let value = scoreObject[1]
                 
@@ -67,19 +64,16 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
                 
                 self.scoreArray.append(resultDict)
             }
-            
-//            print(arrayOfString)
-//            print("================")
-//            print(resultDict)
-//            print("================")
-//            print(self.scoreArray)
-            
+
             self.scoreArray.sort { Int($0["score"]!)! < Int($1["score"]!)! }
             print(self.scoreArray)
 
-            
             DispatchQueue.main.async {
                 self.scorechart.reloadData()
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                    self.deleteRecord()
+                })
             }
         }
         
@@ -91,15 +85,19 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        
-        
+
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
 
         }
+
         task.resume()
     }
         
     func numberOfSections(in tableView: UITableView) -> Int {
+
+        // Separator
+        tableView.separatorStyle = .none
+
         return 1
     }
     
@@ -110,18 +108,31 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = scorechart.dequeueReusableCell(withIdentifier: "GroupResultTableViewCell", for: indexPath) as? GroupResultTableViewCell {
-        
-            
+
+            let userName = UIDevice.current.name
+            let formateduserName = userName.replaceCharacters(characters: " ?&/'.’", toSeparator: "_")
+
+            if scoreArray[indexPath.row]["name"] == formateduserName {
+                print("=== No.1 ===")
+                resultImage.image = UIImage(named: "Win")
                 
-            
+            } else {
+                print("=== Loser ===")
+                resultImage.image = UIImage(named: "Loser")
+            }
+
             cell.rank.text = String(indexPath.row + 1)
             cell.userName.text = scoreArray[indexPath.row]["name"]
             cell.shakeCount.text = scoreArray[indexPath.row]["score"]
-            
-            
-        return cell
+
+            return cell
         }
+
         return UITableViewCell()
     }
 
+    @IBAction func replay(_ sender: Any) {
+        
+        goToPage(storyboardName: Storyboard.home, controllerName: Controller.home)
+    }
 }
