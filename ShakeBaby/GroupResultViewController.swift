@@ -12,7 +12,7 @@ class GroupResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getResult()
         // Do any additional setup after loading the view.
     }
 
@@ -30,10 +30,10 @@ class GroupResultViewController: UIViewController {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             guard let data = data else { return }
+            guard let stringData = String(data: data, encoding: .utf8) else { return }
+            print(stringData)
             
-            print(data)
             
-          
             
         }
         

@@ -27,7 +27,7 @@ class ShakingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        shakeCountLabel.text = "\(shakeCount)"
         timerLabel.text = "\(totalTime)"
         startTimer()
     }
