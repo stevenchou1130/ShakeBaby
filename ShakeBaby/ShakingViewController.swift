@@ -9,14 +9,13 @@
 import UIKit
 import CoreMotion
 import AudioToolbox
-
+import UIView_Shake
 
 class ShakingViewController: BaseViewController {
+
     @IBOutlet weak var timerLabel: UILabel!
-
-
-    //@IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var shakeCountLabel: UILabel!
+    @IBOutlet weak var bottleImageView: UIImageView!
 
     let motionManager = CMMotionManager()
     var timer: Timer?
@@ -40,19 +39,30 @@ class ShakingViewController: BaseViewController {
             
             if let myData = data {
                 
-                if myData.acceleration.y > 5 || myData.acceleration.y < -5 && self.totalTime > 0{
+                if myData.acceleration.y > 1 || myData.acceleration.y < -1 && self.totalTime > 0{
                     
                     print("Enter")
                     self.shakeCount += 1
                     self.shakeCountLabel.text = "\(self.shakeCount)"
+                    self.shakeImage()
                 }
                 
             }
         }
     }
-    
+
+    func shakeImage() {
+
+        bottleImageView.shake(  10,                 // 10 times
+                                withDelta: 15.0,    // 5 points wide
+                                speed: 0.03,        // 30ms per shake
+                                shakeDirection: ShakeDirection.vertical
+        )
+
+    }
+
     func startTimer() {
-        
+
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 1,
                                          target: self,
@@ -74,8 +84,6 @@ class ShakingViewController: BaseViewController {
 
 
     func updateTimer() {
-
-        print("=== updateTimer ===")
 
         if totalTime > 0 {
             totalTime -= 1
