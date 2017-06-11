@@ -8,13 +8,20 @@
 
 import UIKit
 
-class GroupResultViewController: UIViewController {
+class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebViewDelegate {
     
-    //var resultArray = []
+    @IBOutlet weak var scorechart: UITableView!
+    
+    var scoreArray: [[String: String]] = [[:]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getResult()
-        // Do any additional setup after loading the view.
+        
+        let nib = UINib(nibName: "GroupResultTableViewCell", bundle: nil)
+        
+        scorechart.register(nib, forCellReuseIdentifier: "GroupResultTableViewCell")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,39 +39,75 @@ class GroupResultViewController: UIViewController {
             
             guard let data = data else { return }
             guard let stringData = String(data: data, encoding: .utf8) else { return }
+            
             let resultArray = stringData.components(separatedBy: ",")
             
+            var arrayOfString: [[String]] = []
+
+            var resultDict: [String: String] = [:]
             
+            for i in resultArray {
+                let array = i.components(separatedBy: ":")
+                
+                arrayOfString.append(array)
+            }
+            
+            self.scoreArray = []
+            
+            for scoreObject in arrayOfString {
+                let key = scoreObject[0]
+                let value = scoreObject[1]
+                
+                resultDict["name"] = key
+                resultDict["score"] = value
+                
+                self.scoreArray.append(resultDict)
+            }
+            
+//            print(arrayOfString)
+//            print("================")
+//            print(resultDict)
+//            print("================")
+//            print(self.scoreArray)
+            
+            self.scoreArray.sort { Int($0["score"]!)! < Int($1["score"]!)! }
+            print(self.scoreArray)
+
+            
+            DispatchQueue.main.async {
+                self.scorechart.reloadData()
+            }
         }
         
         task.resume()
     }
-
-}
-
-extension Dictionary {
-    func sortedKeys(isOrderedBefore:(Key,Key) -> Bool) -> [Key] {
-        return Array(self.keys).sorted(by: isOrderedBefore)
+    
+    func Ranking() {
+        
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    // Slower because of a lot of lookups, but probably takes less memory (this is equivalent to Pascals answer in an generic extension)
-    func sortedKeysByValue(isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
-        return sortedKeys {
-            isOrderedBefore(self[$0]!, self[$1]!)
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return scoreArray.count
     }
     
-    // Faster because of no lookups, may take more memory because of duplicating contents
-    func keysSortedByValue(isOrderedBefore:(Value, Value) -> Bool) -> [Key] {
-        return Array(self)
-            .sorted() {
-                let (_, lv) = $0
-                let (_, rv) = $1
-                return isOrderedBefore(lv, rv)
-            }
-            .map {
-                let (k, _) = $0
-                return k
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = scorechart.dequeueReusableCell(withIdentifier: "GroupResultTableViewCell", for: indexPath) as? GroupResultTableViewCell {
+        
+            
+                
+            
+            cell.rank.text = String(indexPath.row + 1)
+            cell.userName.text = scoreArray[indexPath.row]["name"]
+            cell.shakeCount.text = scoreArray[indexPath.row]["score"]
+            
+            
+        return cell
         }
+        return UITableViewCell()
     }
+
 }

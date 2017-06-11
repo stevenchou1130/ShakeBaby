@@ -10,6 +10,12 @@ import UIKit
 
 class GroupResultTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var rank: UILabel!
+    
+    @IBOutlet weak var userName: UILabel!
+    
+    @IBOutlet weak var shakeCount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
