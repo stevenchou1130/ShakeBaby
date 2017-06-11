@@ -9,6 +9,6 @@ target 'ShakeBaby' do
   pod 'Hex'
   pod 'UIView+Shake'
   pod 'SCLAlertView'
-
+  pod 'NVActivityIndicatorView'
 
 end
