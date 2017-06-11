@@ -31,13 +31,25 @@ class ConnectionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.text = "Waiting for other players"
-        readyTimeLabel.isHidden = true
+    }
 
-        loadingIndicator.start()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        postID()
-        startTimer()
+        if Game.isSingleGame {
+
+            startReadyTimer()
+
+        } else {
+
+            titleLabel.text = "Waiting for other players"
+            readyTimeLabel.isHidden = true
+
+            loadingIndicator.start()
+            
+            postID()
+            startTimer()
+        }
     }
     
     deinit {

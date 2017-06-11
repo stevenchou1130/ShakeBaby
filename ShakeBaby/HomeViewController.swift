@@ -37,8 +37,8 @@ class HomeViewController: BaseViewController {
 
         Game.isSingleGame = true
 
-        goToPage(storyboardName: Storyboard.shaking,
-                 controllerName: Controller.shaking)
+        goToPage(storyboardName: Storyboard.connection,
+                 controllerName: Controller.connection)
     }
 
     @IBAction func startMultipleGame(_ sender: Any) {
