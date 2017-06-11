@@ -11,8 +11,8 @@ import CoreMotion
 import AudioToolbox
 
 class ShakingViewController: BaseViewController, runTimerDelegate {
-    @IBOutlet weak var timerLabel: UILabel!
 
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var shakeCountLabel: UILabel!
 
     let motionManager = CMMotionManager()
@@ -23,19 +23,18 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let connetVC = ConnectionViewController()
-        connetVC.delegate = self
-        timerLabel.text = String(totalTime)
-        runTimer()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+//        let connetVC = ConnectionViewController()
+//        connetVC.delegate = self
+
+        timerLabel.text = String(totalTime)
+
+        runTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         motionManager.accelerometerUpdateInterval = 0.1
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             
@@ -55,6 +54,7 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
 
     func runTimer() {
 
+        print("=== runTimer ===")
         timer = Timer.scheduledTimer(timeInterval: 1,
                                      target: self,
                                      selector: (#selector(updateTimer)),
@@ -64,26 +64,37 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
     }
 
     func updateTimer() {
+
+        print("=== updateTimer ===")
+
         if totalTime > 0 {
             totalTime -= 1
             timerLabel.text = "\(totalTime)"
         }
+
         if totalTime <= 0 {
             timer.invalidate()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             postResults()
-
         }
 
     }
 
     func postResults() {
+
         guard let score = shakeCountLabel.text else { return }
+
         let userName = UIDevice.current.name
 
-        guard let url = URL(string: "https://wuduhren.com/fap/register.php?id=\(deviceID)&score=\(score)&userName=\(userName)") else {
-            print("wrong url")
-            return }
+        let urlString = "https://wuduhren.com/fap/register.php?id=\(deviceID)&score=\(score)&userName=\(userName)"
+
+        guard
+            let url = URL(string: urlString)
+            else {
+                print("wrong url")
+                return
+            }
+
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
@@ -91,11 +102,10 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
         }
+
         task.resume()
         print("postResult")
-        
-        //goToPage(storyboardName: , controllerName: ) to resultVC
+
     }
-    
     
 }
