@@ -10,13 +10,16 @@ import UIKit
 import CoreMotion
 import AudioToolbox
 
-class ShakingViewController: BaseViewController, runTimerDelegate {
 
+class ShakingViewController: BaseViewController {
     @IBOutlet weak var timerLabel: UILabel!
+
+
+    //@IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var shakeCountLabel: UILabel!
 
     let motionManager = CMMotionManager()
-    var timer = Timer()
+    var timer: Timer?
     var totalTime = 3
     var shakeCount = 0
     let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
@@ -24,12 +27,9 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let connetVC = ConnectionViewController()
-//        connetVC.delegate = self
-
-        timerLabel.text = String(totalTime)
-
-        runTimer()
+        
+        timerLabel.text = "\(totalTime)"
+        startTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,18 +50,28 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
             }
         }
     }
-
-
-    func runTimer() {
-
-        print("=== runTimer ===")
-        timer = Timer.scheduledTimer(timeInterval: 1,
-                                     target: self,
-                                     selector: (#selector(updateTimer)),
-                                     userInfo: nil,
-                                     repeats: true)
-
+    
+    func startTimer() {
+        
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 1,
+                                         target: self,
+                                         selector: (#selector(updateTimer)),
+                                         userInfo: nil,
+                                         repeats: true)
+        }
     }
+    
+    func stopTimer() {
+        
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        
+    }
+
+
 
     func updateTimer() {
 
@@ -73,21 +83,26 @@ class ShakingViewController: BaseViewController, runTimerDelegate {
         }
 
         if totalTime <= 0 {
-            timer.invalidate()
+            stopTimer()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             postResults()
         }
 
     }
-
+    
     func postResults() {
 
         guard let score = shakeCountLabel.text else { return }
 
         let userName = UIDevice.current.name
-
-        let urlString = "https://wuduhren.com/fap/register.php?id=\(deviceID)&score=\(score)&userName=\(userName)"
-
+        
+        userName.replacingOccurrences(of: " ", with: "_")
+        let urlString = "https://wuduhren.com/fap/list.php?score=\(score)&name=\(userName)"
+        print(deviceID)
+        
+        print(score)
+        print(userName)
+        print(urlString)
         guard
             let url = URL(string: urlString)
             else {

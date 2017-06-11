@@ -16,8 +16,6 @@ class ConnectionViewController: BaseViewController {
 
     let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
 
-    weak var delegate: runTimerDelegate?
-
     var timer: Timer?
 
     //在這個controller做loading畫面
@@ -27,7 +25,7 @@ class ConnectionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         postID()
         startTimer()
     }
@@ -78,8 +76,9 @@ class ConnectionViewController: BaseViewController {
 
                 self.goToPage(storyboardName: Constant.Storyboard.SHAKING,
                               controllerName: Constant.Controller.SHAKING)
-
-//                self.delegate?.runTimer()
+                
+//                let shakeVC = UIStoryboard(name: "Shaking", bundle: nil).instantiateViewController(withIdentifier: "ShakingViewController")
+//                self.present(shakeVC, animated: true, completion: nil)
 
 //                DispatchQueue.main.async {
 //                    self.view.backgroundColor = .red
