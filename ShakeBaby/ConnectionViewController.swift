@@ -12,9 +12,10 @@ protocol runTimerDelegate: class {
     func runTimer()
 }
 
-class ConnectionViewController: UIViewController {
+class ConnectionViewController: BaseViewController {
     let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
     weak var delegate: runTimerDelegate?
+    var timer: Timer?
     //在這個controller做loading畫面
     //NVActivityIndicatorView
     //loading結束後跑倒數畫面
@@ -25,9 +26,12 @@ class ConnectionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        sendRequestToSever()
+        startTimer()
     }
-
+    
+    deinit {
+        timer?.invalidate()
+    }
     func postID() {
 
         guard let url = URL(string: "https://wuduhren.com/fap/register.php?id=\(deviceID)") else { return }
@@ -37,7 +41,7 @@ class ConnectionViewController: UIViewController {
         request.httpBody = deviceID.data(using: .utf8)
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-
+            print(data)
         }
 
         task.resume()
@@ -46,10 +50,10 @@ class ConnectionViewController: UIViewController {
 
     func sendRequestToSever() {
 
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(readyConfirm), userInfo: nil, repeats: true)
-
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(readyConfirm), userInfo: nil, repeats: true)
+        
     }
-
+    
     func readyConfirm() {
 
         let urlString = URL(string:"https://wuduhren.com/fap/start.php")
@@ -66,11 +70,15 @@ class ConnectionViewController: UIViewController {
             print(intData)
 
             if  intData == 1 {
+                self.stopTimer()
+                print(self.timer ?? "no timer")
+                self.goToPage(storyboardName: Constant.Storyboard.SHAKING,
+                              controllerName: Constant.Controller.SHAKING)
                 self.delegate?.runTimer()
 
-                DispatchQueue.main.async {
-                    self.view.backgroundColor = .red
-                }
+//                DispatchQueue.main.async {
+//                    self.view.backgroundColor = .red
+//                }
             }
 
         }
@@ -78,7 +86,21 @@ class ConnectionViewController: UIViewController {
         task.resume()
 
     }
-
+    
+    func startTimer() {
+        
+        if timer == nil {
+             timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(readyConfirm), userInfo: nil, repeats: true)
+        }
+    }
+    
+    func stopTimer() {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

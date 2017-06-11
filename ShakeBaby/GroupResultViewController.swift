@@ -21,15 +21,23 @@ class GroupResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func getResult() {
+        let urlString = URL(string:"https://wuduhren.com/fap/list.php?result=1")
+        guard let url = urlString else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data else { return }
+            
+            print(data)
+            
+          
+            
+        }
+        
+        task.resume()
     }
-    */
 
 }
