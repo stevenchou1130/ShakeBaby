@@ -18,6 +18,10 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
         super.viewDidLoad()
         getResult()
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+            self.deleteRecord()
+        })
+        
         let nib = UINib(nibName: "GroupResultTableViewCell", bundle: nil)
         
         scorechart.register(nib, forCellReuseIdentifier: "GroupResultTableViewCell")
@@ -82,9 +86,19 @@ class GroupResultViewController: UIViewController, UITableViewDataSource, UIWebV
         task.resume()
     }
     
-    func Ranking() {
+    func deleteRecord() {
+        guard let url = URL(string: "https://wuduhren.com/fap/list.php?clear=1") else { return }
         
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+        }
+        task.resume()
     }
+        
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
