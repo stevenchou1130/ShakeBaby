@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "fire_bottle.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "bottle_burned.png",
       "scale" : "2x"
     },
     {
