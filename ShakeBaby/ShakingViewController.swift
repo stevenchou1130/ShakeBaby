@@ -18,16 +18,23 @@ class ShakingViewController: BaseViewController {
     @IBOutlet weak var bottleImageView: UIImageView!
 
     let motionManager = CMMotionManager()
+
     var timer: Timer?
+
     var totalTime = 3
     var shakeCount = 0
+
     let deviceID = "\(UIDevice.current.identifierForVendor!.uuidString)"
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         shakeCountLabel.text = "\(shakeCount)"
         timerLabel.text = "\(totalTime)"
+
+        Game.shakedTime = totalTime
+
         startTimer()
     }
     
@@ -81,8 +88,6 @@ class ShakingViewController: BaseViewController {
         
     }
 
-
-
     func updateTimer() {
 
         if totalTime > 0 {
@@ -94,6 +99,14 @@ class ShakingViewController: BaseViewController {
             stopTimer()
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             postResults()
+
+            Game.shakedCount = self.shakeCount
+
+            if Game.isSingleGame {
+                goToPage(storyboardName: Storyboard.personalResult, controllerName: Controller.personalResult)
+            } else {
+                goToPage(storyboardName: Storyboard.groupResult, controllerName: Controller.groupResult)
+            }
         }
 
     }

@@ -140,8 +140,8 @@
 		B01A85161EEB935100AD2BD0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */,
 				B01A85041EEB8DA200AD2BD0 /* HomeViewController.swift */,
+				B01A85061EEB8DBB00AD2BD0 /* Home.storyboard */,
 			);
 			name = Home;
 			sourceTree = "<group>";

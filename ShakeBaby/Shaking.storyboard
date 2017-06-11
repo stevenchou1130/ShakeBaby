@@ -24,26 +24,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="bottle" translatesAutoresizingMaskIntoConstraints="NO" id="kLn-RV-9X7">
                                 <rect key="frame" x="46" y="135" width="283" height="502"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搖動時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-Ra-2fJ">
-                                <rect key="frame" x="26" y="40" width="69.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shaked time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-Ra-2fJ">
+                                <rect key="frame" x="26" y="40" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es9-BD-RVJ">
-                                <rect key="frame" x="125.5" y="40" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es9-BD-RVJ">
+                                <rect key="frame" x="164.5" y="40" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搖動次數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-34-m3e">
-                                <rect key="frame" x="26" y="81" width="69.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shaked Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-34-m3e">
+                                <rect key="frame" x="26" y="81" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqI-2C-VUI">
-                                <rect key="frame" x="125.5" y="81" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqI-2C-VUI">
+                                <rect key="frame" x="164" y="81" width="10.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="tqI-2C-VUI" firstAttribute="leading" secondItem="TsG-34-m3e" secondAttribute="trailing" constant="30" id="6xJ-IQ-tX7"/>
                             <constraint firstItem="tqI-2C-VUI" firstAttribute="top" secondItem="es9-BD-RVJ" secondAttribute="bottom" constant="20" id="AcR-j0-a0d"/>
                             <constraint firstItem="kLn-RV-9X7" firstAttribute="leading" secondItem="iZr-YG-4gM" secondAttribute="leadingMargin" constant="30" id="G6n-ZJ-gPA"/>
-                            <constraint firstItem="es9-BD-RVJ" firstAttribute="leading" secondItem="FVh-Ra-2fJ" secondAttribute="trailing" constant="30" id="TgY-fI-tYy"/>
+                            <constraint firstItem="es9-BD-RVJ" firstAttribute="centerX" secondItem="tqI-2C-VUI" secondAttribute="centerX" id="SOV-Tu-FJC"/>
                             <constraint firstItem="kLn-RV-9X7" firstAttribute="top" secondItem="tqI-2C-VUI" secondAttribute="bottom" constant="33" id="UM2-7x-OpN"/>
                             <constraint firstItem="FVh-Ra-2fJ" firstAttribute="top" secondItem="EdD-BI-m7o" secondAttribute="bottom" constant="20" id="Uu0-XN-uxw"/>
                             <constraint firstItem="es9-BD-RVJ" firstAttribute="baseline" secondItem="FVh-Ra-2fJ" secondAttribute="baseline" id="aB4-VU-Qn3"/>

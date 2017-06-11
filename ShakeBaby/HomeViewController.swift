@@ -35,17 +35,19 @@ class HomeViewController: BaseViewController {
     @IBAction func startSingleGame(_ sender: Any) {
         print("startSingleGame")
 
+        Game.isSingleGame = true
+
         goToPage(storyboardName: Storyboard.shaking,
                  controllerName: Controller.shaking)
-
     }
 
     @IBAction func startMultipleGame(_ sender: Any) {
         print("startMultipleGame")
-        
+
+        Game.isSingleGame = false
+
         goToPage(storyboardName: Storyboard.connection,
                  controllerName: Controller.connection)
-
     }
 
     @IBAction func introduceGame(_ sender: Any) {
