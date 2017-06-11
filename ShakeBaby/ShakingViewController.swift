@@ -96,7 +96,8 @@ class ShakingViewController: BaseViewController {
 
         let userName = UIDevice.current.name
         
-        userName.replacingOccurrences(of: " ", with: "_")
+        //let characterArray: [Character] = [" ", "?", "\", "&"]
+        //userName.stringByRemovingAll(characters: characterArray)
         let urlString = "https://wuduhren.com/fap/list.php?score=\(score)&name=\(userName)"
         print(deviceID)
         
@@ -121,6 +122,13 @@ class ShakingViewController: BaseViewController {
         task.resume()
         print("postResult")
 
+    }
+    
+}
+
+extension String {
+    func stringByRemovingAll(characters: [Character]) -> String {
+        return String(self.characters.filter({ !characters.contains($0) }))
     }
     
 }
