@@ -74,8 +74,8 @@ class ConnectionViewController: BaseViewController {
                 self.stopTimer()
                 print(self.timer ?? "no timer")
 
-                self.goToPage(storyboardName: Constant.Storyboard.SHAKING,
-                              controllerName: Constant.Controller.SHAKING)
+                self.goToPage(storyboardName: Storyboard.shaking,
+                              controllerName: Controller.shaking)
                 
 //                let shakeVC = UIStoryboard(name: "Shaking", bundle: nil).instantiateViewController(withIdentifier: "ShakingViewController")
 //                self.present(shakeVC, animated: true, completion: nil)
